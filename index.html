@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox - Documentação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Flexbox - Documentação</h1>
+    <h3>display: flex</h3>
+    <p class="descricao-propriedade">
+    <!-- Atalho para criar tag com a classe (Abreviação Emmet) " tag.nome-da-classe "-->
+    A propriedade display: flex transforma o elemento em um flex contêiner e nos permite manipular os elementos dentro desse display com novas propriedades, adaptando-se aos diferentes tamamhos de de exibição.</p>
+
+    <p>Exemplo:</p>
+    <div class="container display-flex">
+        <div class="contido"></div>
+        <div class="contido"></div>
+        <div class="contido"></div>
+        <div class="contido"></div>
+        <div class="contido"></div>
+    </div>
+
+    <table>
+        <caption>Valores padrão das propriedades do Flexbox</caption>
+        <tr>
+            <th class="propriedade">a</th>
+            <th class="valor">a</th>
+        </tr>
+        <tr>
+            <td class="propriedade">flex-direction</td>
+            <td class="valor">row</td>
+        </tr>
+        <tr>
+            <td class="propriedade">justify-content</td>
+            <td class="valor">flex-start</td>
+        </tr>
+        <tr>
+            <td class="propriedade">align-content</td>
+            <td class="valor">flex-start</td>
+        </tr>
+    </table>
+
+    <h3>justify-content</h3>
+    <h4>center</h4>
+    
+    <p class="descricao-prorpriedade">A propriedade justify-content pode ser usada para jsutificar o conteúdo do elemento contêiner em seu eixo primario, ou seja, eixo x (row, row-reverse) ou eixo y (collum, collum-reverse)</p>
+
+    <p>Exemplo:</p>
+    <div class="container display-flex justify-content-center">
+    <div class="contido"></div>
+    <div class="contido"></div>
+    <div class="contido"></div>
+    <div class="contido"></div>
+    <div class="contido"></div>
+    </div>
+</body>
+</html>
