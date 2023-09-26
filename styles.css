@@ -48,9 +48,9 @@ p {
 }
 
 table {
-    width: 220px;
-    height: 200px;
-    margin: 20px;
+    width: 27%;
+    height: 400px;
+    margin: auto;
     border: 5px solid #000000;
     border-radius: 10px;
     border-spacing: 5px;
@@ -62,16 +62,15 @@ caption {
     caption-side: bottom;
 }
 
-tr, th {
-    font-size: 20pt;
-    border: none
+tr, th, td {
+    font-size: 15px;
+    text-align: center;
 }
 
-tr:nth-child(odd) {
-    background-color: #ffffff;
-}
 
-tr :first-child {
+tr:nth-child(even){
+    background-color: #000000;
+    color: #ffffff;
 }
 
 body {
@@ -83,6 +82,7 @@ body {
     height: 200px;
     background-color: #000863;
     border: 5px solid #000000;
+    margin-bottom: 20px;
 }
 
 .contido {
