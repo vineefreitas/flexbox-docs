@@ -6,14 +6,26 @@
     <title>Flexbox - Documentação</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+    <nav>
+        <ul class="menu">
+            <li><a href="#">display: flex</a></li>
+            <li><a href="#justify-content">justify-content</a>
+                <ul>
+                    <li><a href="#">flex-start</a></li>
+                    <li><a href="#">flex-end</a></li>
+                    <li><a href="#">center</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 <body>
     <h1>Flexbox - Documentação</h1>
     <h3>display: flex</h3>
     <p class="descricao-propriedade">
     <!-- Atalho para criar tag com a classe (Abreviação Emmet) " tag.nome-da-classe "-->
-    A propriedade display: flex transforma o elemento em um flex contêiner e nos permite manipular os elementos dentro desse display com novas propriedades, adaptando-se aos diferentes tamanhos de exibição.</p>
+    A propriedade display: flex transforma o elemento em um flex contêiner e nos permite manipular todos os elementos filhos dentro desse display com novas propriedades. Por padrão, quando aplicamos display: flex para um elemento, todos os filhos ficam um do lado do outro como se estivessem sob o efeito de display: inline.</p>
 
-    <h4>Exemplo:</h4>
+    <h5>Exemplos:</h5>
     <div class="container display-flex">
         <div class="contido"></div>
         <div class="contido"></div>
@@ -21,8 +33,9 @@
         <div class="contido"></div>
         <div class="contido"></div>
     </div>
+
     <table>
-        <caption>Valores padrão das propriedades do Flexbox</caption>
+        <caption>Valores padrão (default), das propriedades do Flexbox</caption>
         <tr>
             <td class="propriedade">justify-content</td>
             <td class="valor">flex-start</td>
@@ -48,12 +61,40 @@
             <td class="valor">stretch</td>
         </tr>
     </table>
-    <h3>justify-content</h3>
-    <h5>center</h5>
-    
-    <p class="descricao-propriedade">A propriedade justify-content pode ser usada para jutificar o conteúdo do elemento contêiner em seu eixo primario, ou seja, eixo x (row, row-reverse) ou eixo y (collum, collum-reverse)</p>
 
-    <h4>Exemplo:</h4>
+    <h3 id="justify-content"></a>justify-content</h3>
+    <p class="descricao-propriedade">Esta propriedade define o alinhamento dos ítens ao longo do eixo principal. Ajuda a distribuir o espaço livre que sobrar no container tanto se todos os flex items em uma linha são inflexíveis, ou são flexíveis mas já atingiram seu tamanho máximo. Também exerce algum controle sobre o alinhamento de ítens quando eles ultrapassam o limite da linha.</p>
+
+    <p class="descricao-propriedade">Abaixo estão seus possíveis valores:</p>
+
+    <h3>flex-start</h3>
+    <p class="descricao-propriedade">Os ítens são alinhados junto à borda de início (start) de acordo com qual for a flex-direction do container.</p>
+
+    <h5>Exemplo:</h5>
+    <div class="container display-flex justify-content-flex-start">
+    <div class="contido"></div>
+    <div class="contido"></div>
+    <div class="contido"></div>
+    <div class="contido"></div>
+    <div class="contido"></div>
+    </div>
+
+    <h3>flex-end</h3>    
+    <p class="descricao-propriedade">Os ítens são alinhados junto à borda final (end) de acordo com qual for a flex-direction do container.</p>
+
+    <h5>Exemplo:</h5>
+    <div class="container display-flex justify-content-flex-end">
+    <div class="contido"></div>
+    <div class="contido"></div>
+    <div class="contido"></div>
+    <div class="contido"></div>
+    <div class="contido"></div>
+    </div>    
+
+    <h3>center</h3>    
+    <p class="descricao-propriedade">Os ítens são centralizados na linha.</p>
+
+    <h5>Exemplo:</h5>
     <div class="container display-flex justify-content-center">
     <div class="contido"></div>
     <div class="contido"></div>
@@ -62,9 +103,45 @@
     <div class="contido"></div>
     </div>
 
+    <h3>space-between</h3>
+    <p class="descricao-propriedade">Os ítens são distribuídos de forma igual ao longo da linha; o primeiro ítem junto à borda inicial da linha, o último junto à borda final da linha.</p>
+
+    <h5>Exemplo:</h5>
+    <div class="container display-flex justify-content-space-between">
+    <div class="contido"></div>
+    <div class="contido"></div>
+    <div class="contido"></div>
+    <div class="contido"></div>
+    <div class="contido"></div>
+    </div>
+
+    <h3>space-around</h3>    
+    <p class="descricao-propriedade">Os ítens são distribuídos na linha com o mesmo espaçamento entre eles. Note que, visualmente, o espaço pode não ser igual, uma vez que todos os ítens tem a mesma quantidade de espaço dos dois lados: o primeiro item vai ter somente uma unidade de espaço junto à borda do container, mas duas unidades de espaço entre ele e o próximo ítem, pois o próximo ítem também tem seu próprio espaçamento que está sendo aplicado.</p>
+
+    <h5>Exemplo:</h5>
+    <div class="container display-flex justify-content-space-around">
+    <div class="contido"></div>
+    <div class="contido"></div>
+    <div class="contido"></div>
+    <div class="contido"></div>
+    <div class="contido"></div>
+    </div>
+
+    <h3>space-evenly</h3>
+    <p class="descricao-propriedade">Os ítens são distribuídos de forma que o espaçamento entre quaisquer dois itens da linha (incluindo entre os ítens e as bordas) seja igual.</p>
+
+    <h5>Exemplo:</h5>
+    <div class="container display-flex justify-content-space-evenly">
+    <div class="contido"></div>
+    <div class="contido"></div>
+    <div class="contido"></div>
+    <div class="contido"></div>
+    <div class="contido"></div>
+    </div>
     https://site.alura.com.br/artigos/css-guia-do-flexbox?utm_term=&utm_campaign=%5BSearch%5D+%5BPerformance%5D+-+Dynamic+Search+Ads+-+Artigos+e+Conte%C3%BAdos&utm_source=adwords&utm_medium=ppc&hsa_acc=7964138385&hsa_cam=11384329873&hsa_grp=111087461203&hsa_ad=662261334153&hsa_src=g&hsa_tgt=aud-539280195044:dsa-843358956400&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gclid=EAIaIQobChMI8d3T-ffIgQMVleBcCh10FQPvEAAYASAAEgIeufD_BwE
 
+    https://www.alura.com.br/apostila-html-css-javascript/19CA-novos-layouts-com-flexbox#:~:text=O%20display%3A%20flex%20funciona%20de,flex%20container%20com%20propriedades%20novas.
 
-    
+    https://www.devmedia.com.br/menu-em-css-menu-dropdown-horizontal-com-html5-e-css3/37205
 </body>
 </html>
