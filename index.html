@@ -8,21 +8,30 @@
 </head>
     <nav>
         <ul class="menu">
-            <li><a href="#">display: flex</a></li>
+            <li><a href="#display-flex">display: flex</a></li>
             <li><a href="#justify-content">justify-content</a>
                 <ul>
-                    <li><a href="#">flex-start</a></li>
-                    <li><a href="#">flex-end</a></li>
-                    <li><a href="#">space-between</a></li>
-                    <li><a href="#">space-around</a></li>
-                    <li><a href="#">space-evenly</a></li>
+                    <li><a href="#flex-start">flex-start</a></li>
+                    <li><a href="#flex-end">flex-end</a></li>
+                    <li><a href="#center">center</a></li>
+                    <li><a href="#space-between">space-between</a></li>
+                    <li><a href="#space-around">space-around</a></li>
+                    <li><a href="#space-evenly">space-evenly</a></li>
+                </ul>
+            </li>
+            <li><a href="#flex-direction">flex-direction</a>
+                <ul>
+                    <li><a href="#row">row</a></li>
+                    <li><a href="#row-reverse">row-reverse</a></li>
+                    <li><a href="#column">column</a></li>
+                    <li><a href="#column-reverse">column-reverse</a></li>
                 </ul>
             </li>
         </ul>
     </nav>
 <body>
     <h2>Flexbox - Documentação</h2>
-    <h3>display: flex</h3>
+    <h3 id="display-flex">display: flex</h3>
     <p class="descricao-propriedade">
     <!-- Atalho para criar tag com a classe (Abreviação Emmet) " tag.nome-da-classe "-->
     A propriedade display: flex transforma o elemento em um flex contêiner e nos permite manipular todos os elementos filhos dentro desse display com novas propriedades. Por padrão, quando aplicamos display: flex para um elemento, todos os filhos ficam um do lado do outro como se estivessem sob o efeito de display: inline.</p>
@@ -64,12 +73,12 @@
         </tr>
     </table>
 
-    <h3 id="justify-content"></a>justify-content</h3>
+    <h3 id="justify-content"></a>○ justify-content</h3>
     <p class="descricao-propriedade">Esta propriedade define o alinhamento dos ítens ao longo do eixo principal. Ajuda a distribuir o espaço livre que sobrar no container tanto se todos os flex items em uma linha são inflexíveis, ou são flexíveis mas já atingiram seu tamanho máximo. Também exerce algum controle sobre o alinhamento de ítens quando eles ultrapassam o limite da linha.</p>
 
     <p class="descricao-propriedade">Abaixo estão seus possíveis valores:</p>
 
-    <h3>flex-start</h3>
+    <h3 id="flex-start">flex-start</h3>
     <p class="descricao-propriedade">Os ítens são alinhados junto à borda de início (start) de acordo com qual for a flex-direction do container.</p>
 
     <h5>Exemplo:</h5>
@@ -81,7 +90,7 @@
     <div class="contido"></div>
     </div>
 
-    <h3>flex-end</h3>    
+    <h3 id="flex-end">flex-end</h3>    
     <p class="descricao-propriedade">Os ítens são alinhados junto à borda final (end) de acordo com qual for a flex-direction do container.</p>
 
     <h5>Exemplo:</h5>
@@ -93,7 +102,7 @@
     <div class="contido"></div>
     </div>    
 
-    <h3>center</h3>    
+    <h3 id="center">center</h3>    
     <p class="descricao-propriedade">Os ítens são centralizados na linha.</p>
 
     <h5>Exemplo:</h5>
@@ -105,7 +114,7 @@
     <div class="contido"></div>
     </div>
 
-    <h3>space-between</h3>
+    <h3 id="space-between">space-between</h3>
     <p class="descricao-propriedade">Os ítens são distribuídos de forma igual ao longo da linha; o primeiro ítem junto à borda inicial da linha, o último junto à borda final da linha.</p>
 
     <h5>Exemplo:</h5>
@@ -117,7 +126,7 @@
     <div class="contido"></div>
     </div>
 
-    <h3>space-around</h3>    
+    <h3 id="space-around">space-around</h3>    
     <p class="descricao-propriedade">Os ítens são distribuídos na linha com o mesmo espaçamento entre eles. Note que, visualmente, o espaço pode não ser igual, uma vez que todos os ítens tem a mesma quantidade de espaço dos dois lados: o primeiro item vai ter somente uma unidade de espaço junto à borda do container, mas duas unidades de espaço entre ele e o próximo ítem, pois o próximo ítem também tem seu próprio espaçamento que está sendo aplicado.</p>
 
     <h5>Exemplo:</h5>
@@ -129,7 +138,7 @@
     <div class="contido"></div>
     </div>
 
-    <h3>space-evenly</h3>
+    <h3 id="space-evenly">space-evenly</h3>
     <p class="descricao-propriedade">Os ítens são distribuídos de forma que o espaçamento entre quaisquer dois itens da linha (incluindo entre os ítens e as bordas) seja igual.</p>
 
     <h5>Exemplo:</h5>
@@ -140,10 +149,71 @@
     <div class="contido"></div>
     <div class="contido"></div>
     </div>
-    https://site.alura.com.br/artigos/css-guia-do-flexbox?utm_term=&utm_campaign=%5BSearch%5D+%5BPerformance%5D+-+Dynamic+Search+Ads+-+Artigos+e+Conte%C3%BAdos&utm_source=adwords&utm_medium=ppc&hsa_acc=7964138385&hsa_cam=11384329873&hsa_grp=111087461203&hsa_ad=662261334153&hsa_src=g&hsa_tgt=aud-539280195044:dsa-843358956400&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gclid=EAIaIQobChMI8d3T-ffIgQMVleBcCh10FQPvEAAYASAAEgIeufD_BwE
+
+    <h3 id="flex-direction"></a>○ flex-direction</h3>
+    <p class="descricao-propriedade">Estabelece o eixo principal, definindo assim a direção em que os flex items são alinhados no flex container. O Flexbox é (com exceção de um wrapping opcional) um conceito de leiaute de uma só direção. Pense nos flex items inicialmente posicionaids ou em linhas horizontais ou em colunas verticais.</p>
+
+    <p class="descricao-propriedade">Abaixo estão seus possíveis valores:</p>
+
+    <h3 id="row">row</h3>
+    <p class="descricao-propriedade">Os ítens são alinhados Os ítens são alinhados partindo da parte esquerda do contêiner sentido a parte direita, da esquerda para a direita.</p>
+
+    <h5>Exemplo:</h5>
+    <div class="container display-flex flex-direction-row">
+    <div class="contido"></div>
+    <div class="contido"></div>
+    <div class="contido"></div>
+    <div class="contido"></div>
+    <div class="contido"></div>
+    </div>
+
+    <h3 id="row-reverse">row-reverse</h3>
+    <p class="descricao-propriedade">Os ítens são alinhados Os ítens são alinhados partindo da parte direita do contêiner sentido a parte esquerda, da direita para a esquerda.</p>
+
+    <h5>Exemplo:</h5>
+    <div class="container display-flex flex-direction-row-reverse">
+    <div class="contido"></div>
+    <div class="contido"></div>
+    <div class="contido"></div>
+    <div class="contido"></div>
+    <div class="contido"></div>
+    </div>
+
+    <h3 id="column">column</h3>
+    <p class="descricao-propriedade">Os ítens são alinhados partindo da parte superior do contêiner sentido a parte inferior, de cima para baixo.</p>
+
+    <h5>Exemplo:</h5>
+    <div class="container display-flex flex-direction-column">
+    <div class="contido"></div>
+    <div class="contido"></div>
+    <div class="contido"></div>
+    <div class="contido"></div>
+    <div class="contido"></div>
+    </div>
+
+    <h3 id="column-reverse">column-reverse</h3>
+    <p class="descricao-propriedade">Os ítens são alinhados partindo da parte inferior do contêiner sentido a parte superior, de baixo para cima.</p>
+
+    <h5>Exemplo:</h5>
+    <div class="container display-flex flex-direction-column-reverse">
+    <div class="contido"></div>
+    <div class="contido"></div>
+    <div class="contido"></div>
+    <div class="contido"></div>
+    <div class="contido"></div>
+    </div>
+
+    <!-- FAZER OUTRAS 4 PROPRIEDADES / FINALIZAR MENU DE NAVEGAÇÃO / COLOCAR BOTÃO DE TOPO FICO COM ROLAGEM SUAVE / COLOCAR O 'EXEMPLO:' ALINHADO AO CONTÊINER. -->
+    <!-- LINKS ÚTEIS -->
+
+    https://www.devmedia.com.br/menu-em-css-menu-dropdown-horizontal-com-html5-e-css3/37205
 
     https://www.alura.com.br/apostila-html-css-javascript/19CA-novos-layouts-com-flexbox#:~:text=O%20display%3A%20flex%20funciona%20de,flex%20container%20com%20propriedades%20novas.
-    
-    https://www.devmedia.com.br/menu-em-css-menu-dropdown-horizontal-com-html5-e-css3/37205
+
+    https://site.alura.com.br/artigos/css-guia-do-flexbox?utm_term=&utm_campaign=%5BSearch%5D+%5BPerformance%5D+-+Dynamic+Search+Ads+-+Artigos+e+Conte%C3%BAdos&utm_source=adwords&utm_medium=ppc&hsa_acc=7964138385&hsa_cam=11384329873&hsa_grp=111087461203&hsa_ad=662261334153&hsa_src=g&hsa_tgt=aud-539280195044:dsa-843358956400&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gclid=EAIaIQobChMI8d3T-ffIgQMVleBcCh10FQPvEAAYASAAEgIeufD_BwE
+
+    https://pt.linkedin.com/pulse/como-criar-um-bot%C3%A3o-para-voltar-ao-topo-em-uma-p%C3%A1gina-calixto-mocci#:~:text=No%20html%20%C3%A9%20simples%2C%20insira,via%20CSS%20e%20estiliz%C3%A1%2Dlo.
+
+    https://pt.stackoverflow.com/questions/339628/bot%C3%A3o-de-voltar-ao-topo-apenas-com-css-scroll-suave-apenas-com-css-%C3%A9-poss%C3%ADvel
 </body>
 </html>
