@@ -8,6 +8,7 @@
 </head>
     <nav>
         <ul class="menu">
+            <li><a href="#topo">Ínicio</a></li>
             <li><a href="#display-flex">display: flex</a></li>
             <li><a href="#justify-content">justify-content</a>
                 <ul>
@@ -27,11 +28,41 @@
                     <li><a href="#flex-direction-column-reverse">column-reverse</a></li>
                 </ul>
             </li>
+            <li><a href="#align-items">align-items</a>
+                <ul>
+                    <li><a href="#align-items-stretch">stretch</a></li>
+                    <li><a href="#align-items-flex-start">flex-start</a></li>
+                    <li><a href="#align-items-flex-end">flex-end</a></li>
+                    <li><a href="#align-items-center">center</a></li>
+                    <li><a href="#align-items-baseline">baseline</a></li>
+                </ul>
+            </li>
+            <li><a href="#flex-wrap">flex-wrap</a>
+                <ul>
+                    <li><a href="#flex-wrap-nowrap">nowrap</a></li>
+                    <li><a href="#flex-wrap-wrap">wrap</a></li>
+                    <li><a href="#flex-wrap-wrap-reverse">wrap-reverse</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#flex-flow">flex-flow</a></li>
+
+            <li><a href="#align-content">align-content</a>
+                <ul>
+                     <li><a href="#align-content-stretch">stretch</a></li>
+                     <li><a href="#align-content-flex-start">flex-start</a></li>
+                     <li><a href="#align-content-flex-end">flex-end</a></li>
+                     <li><a href="#align-content-center">center</a></li>
+                     <li><a href="#align-content-space-between">space-between</a></li>
+                     <li><a href="#align-content-space-around">space-around</a></li>
+                     <li><a href="#align-content-space-evenly">space-evenly</a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
 <body>
-    <h2>Flexbox - Documentação</h2>
-    <h3 id="display-flex">display: flex</h3>
+    <h2 id="topo">Flexbox - Documentação</h2>
+    <h3 id="display-flex">○ display: flex</h3>
     <p class="descricao-propriedade">
     <!-- Atalho para criar tag com a classe (Abreviação Emmet) " tag.nome-da-classe "-->
     A propriedade display: flex transforma o elemento em um flex contêiner e nos permite manipular todos os elementos filhos dentro desse display com novas propriedades. Por padrão, quando aplicamos display: flex para um elemento, todos os filhos ficam um do lado do outro como se estivessem sob o efeito de display: inline.</p>
@@ -79,7 +110,7 @@
     <p class="descricao-propriedade">Abaixo estão seus possíveis valores:</p>
 
     <h3 id="justify-content-flex-start">flex-start</h3>
-    <p class="descricao-propriedade">Os ítens são alinhados junto à borda de início (start) de acordo com qual for a flex-direction do container.</p>
+    <p class="descricao-propriedade">É o valor padrão. Os elementos ficam grudados um do lado do outro à esquerda do flex container. Os ítens são alinhados junto à borda de início (start) de acordo com qual for a flex-direction do container.</p>
 
     <h5>Exemplo:</h5>
     <div class="container display-flex justify-content-flex-start">
@@ -91,7 +122,7 @@
     </div>
 
     <h3 id="justify-content-flex-end">flex-end</h3>    
-    <p class="descricao-propriedade">Os ítens são alinhados junto à borda final (end) de acordo com qual for a flex-direction do container.</p>
+    <p class="descricao-propriedade">Os elementos ficam grudados um do lado do outro à direita do flex container. Os ítens são alinhados junto à borda final (end) de acordo com qual for a flex-direction do container.</p>
 
     <h5>Exemplo:</h5>
     <div class="container display-flex justify-content-flex-end">
@@ -103,7 +134,7 @@
     </div>    
 
     <h3 id="justify-content-center">center</h3>    
-    <p class="descricao-propriedade">Os ítens são centralizados na linha.</p>
+    <p class="descricao-propriedade">Os elementos ficam grudados um do lado do outro no meio do flex container. Os ítens são centralizados na linha.</p>
 
     <h5>Exemplo:</h5>
     <div class="container display-flex justify-content-center">
@@ -115,7 +146,7 @@
     </div>
 
     <h3 id="justify-content-space-between">space-between</h3>
-    <p class="descricao-propriedade">Os ítens são distribuídos de forma igual ao longo da linha; o primeiro ítem junto à borda inicial da linha, o último junto à borda final da linha.</p>
+    <p class="descricao-propriedade">O primeiro elemento fica totalmente à esquerda do flex container e o último fica totalmente à direita. O restante dos elementos ficam distribuídos com um espaçamento igual entre eles. Os ítens são distribuídos de forma igual ao longo da linha; o primeiro ítem junto à borda inicial da linha, o último junto à borda final da linha.</p>
 
     <h5>Exemplo:</h5>
     <div class="container display-flex justify-content-space-between">
@@ -127,7 +158,7 @@
     </div>
 
     <h3 id="justify-content-space-around">space-around</h3>    
-    <p class="descricao-propriedade">Os ítens são distribuídos na linha com o mesmo espaçamento entre eles. Note que, visualmente, o espaço pode não ser igual, uma vez que todos os ítens tem a mesma quantidade de espaço dos dois lados: o primeiro item vai ter somente uma unidade de espaço junto à borda do container, mas duas unidades de espaço entre ele e o próximo ítem, pois o próximo ítem também tem seu próprio espaçamento que está sendo aplicado.</p>
+    <p class="descricao-propriedade">Cada elemento fica com um espaçamento igual em volta dele mesmo. Isso quer dizer que o primeiro elemento vai ter um espaçamento maior à direita do que à esquerda porque vai somar com o espaçamento à esquerda do segundo elemento. Os ítens são distribuídos na linha com o mesmo espaçamento entre eles. Note que, visualmente, o espaço pode não ser igual, uma vez que todos os ítens tem a mesma quantidade de espaço dos dois lados: o primeiro item vai ter somente uma unidade de espaço junto à borda do container, mas duas unidades de espaço entre ele e o próximo ítem, pois o próximo ítem também tem seu próprio espaçamento que está sendo aplicado.</p>
 
     <h5>Exemplo:</h5>
     <div class="container display-flex justify-content-space-around">
@@ -139,7 +170,7 @@
     </div>
 
     <h3 id="justify-content-space-evenly">space-evenly</h3>
-    <p class="descricao-propriedade">Os ítens são distribuídos de forma que o espaçamento entre quaisquer dois itens da linha (incluindo entre os ítens e as bordas) seja igual.</p>
+    <p class="descricao-propriedade">Corrige o "problema" do valor acima. Os elementos terão um espaçamento igual em ambos os lados. Os ítens são distribuídos de forma que o espaçamento entre quaisquer dois itens da linha (incluindo entre os ítens e as bordas) seja igual.</p>
 
     <h5>Exemplo:</h5>
     <div class="container display-flex justify-content-space-evenly">
@@ -156,7 +187,7 @@
     <p class="descricao-propriedade">Abaixo estão seus possíveis valores:</p>
 
     <h3 id="flex-direction-row">row</h3>
-    <p class="descricao-propriedade">Os ítens são alinhados Os ítens são alinhados partindo da parte esquerda do contêiner sentido a parte direita, da esquerda para a direita.</p>
+    <p class="descricao-propriedade">É o valor padrão, os ítens são alinhados Os ítens são alinhados partindo da parte esquerda do contêiner sentido a parte direita, da esquerda para a direita.</p>
 
     <h5>Exemplo:</h5>
     <div class="container display-flex flex-direction-row">
@@ -209,8 +240,8 @@
 
     <p class="descricao-propriedade">Abaixo estão seus possíveis valores:</p>
 
-    <h3 id="stretch">stretch</h3>
-    <p class="descricao-propriedade">estica os ítens para preencher o container, respeitando o min-width/max-width).</p>
+    <h3 id="align-items-stretch">stretch</h3>
+    <p class="descricao-propriedade">É o valor padrão, estica os ítens para preencher o container, respeitando o min-width/max-width), os elementos se "esticam" para que todos fiquem com a mesma altura.</p>
 
     <h5>Exemplo:</h5>
     <div class="container display-flex align-items-stretch">
@@ -222,7 +253,7 @@
     </div>
 
     <h3 id="align-items-flex-start">flex-start</h3>
-    <p class="descricao-propriedade">ítens são posicionados no início do eixo transversal. A diferença entre eles é sutil e diz respeito às regras de flex-direction ou writing-mode.</p>
+    <p class="descricao-propriedade">ítens são posicionados no início do eixo transversal. A diferença entre eles é sutil e diz respeito às regras de flex-direction ou writing-mode, os elementos ficam todos alinhados com o topo do flex container.</p>
 
     <h5>Exemplo:</h5>
     <div class="container display-flex align-items-flex-start">
@@ -234,7 +265,7 @@
     </div>
 
     <h3 id="align-items-flex-end">flex-end</h3>
-    <p class="descricao-propriedade">123456</p>
+    <p class="descricao-propriedade">Os elementos ficam todos alinhados com a base do flex container.</p>
 
     <h5>Exemplo:</h5>
     <div class="container display-flex align-items-flex-end">
@@ -246,7 +277,7 @@
     </div>
     
     <h3 id="align-items-center">center</h3>
-    <p class="descricao-propriedade">ítens são centralizados no eixo transversal.</p>
+    <p class="descricao-propriedade">ítens são centralizados no eixo transversal, os elementos ficam todos alinhados com o meio do flex container.</p>
 
     <h5>Exemplo:</h5>
     <div class="container display-flex align-items-center">
@@ -258,7 +289,7 @@
     </div>
 
     <h3 id="align-items-baseline">baseline</h3>
-    <p class="descricao-propriedade">ítens são alinhados de acordo com suas baselines.</p>
+    <p class="descricao-propriedade">ítens são alinhados de acordo com suas baselines, os elementos ficam alinhados com base do conteúdo textual de cada um deles.</p>
 
     <h5>Exemplo:</h5>
     <div class="container display-flex align-items-baseline">
@@ -275,7 +306,7 @@
     <p class="descricao-propriedade">Abaixo estão seus possíveis valores:</p>
 
     <h3 id="flex-wrap-nowrap">nowrap</h3>
-    <p class="descricao-propriedade">Todos os flex items ficarão em uma só linha.</p>
+    <p class="descricao-propriedade">É o valor padrão, os elementos vão ficar um do lado do outro mesmo que não exista mais espaço horizontal. Todos os flex items ficarão em uma só linha.</p>
 
     <h5>Exemplo:</h5>
     <div class="container display-flex flex-wrap-nowrap">
@@ -304,7 +335,7 @@
     </div>
 
     <h3 id="flex-wrap-wrap">wrap</h3>
-    <p class="descricao-propriedade">Os flex items vão quebrar em múltiplas linhas, de cima para baixo.</p>
+    <p class="descricao-propriedade">Os elementos que não cabem mais no espaço lateral recebem uma quebra de linha, ou seja, vão para a linha debaixo. Os flex items vão quebrar em múltiplas linhas, de cima para baixo.</p>
 
     <h5>Exemplo:</h5>
     <div class="container display-flex flex-wrap-wrap">
@@ -333,7 +364,7 @@
     </div>
 
     <h3 id="flex-wrap-wrap-reverse">wrap-reverse</h3>
-    <p class="descricao-propriedade">Os flex items vão quebrar em múltiplas linhas de baixo para cima;</p>
+    <p class="descricao-propriedade">Os elementos que não cabem mais no espaço lateral recebem uma quebra de linha acima, ou seja, vão para a linha de cima. Os flex items vão quebrar em múltiplas linhas de baixo para cima.</p>
 
     <h5>Exemplo:</h5>
     <div class="container display-flex flex-wrap-wrap-reverse">
@@ -362,11 +393,11 @@
     </div>
 
     <h3 id="flex-flow"></a>○ flex-flow</h3>
-    <p class="descricao-propriedade">A propriedade flex-flow é uma propriedade shorthand (uma mesma declaração inclui vários valores relacionados a mais de uma propriedade) que inclui flex-direction e flex-wrap. Determina quais serão os eixos pricipal e transversal do container. O valor padrão é row nowrap.</p>
+    <p class="descricao-propriedade">A propriedade flex-flow é uma propriedade shorthand (uma mesma declaração inclui vários valores relacionados a mais de uma propriedade) que inclui flex-direction e flex-wrap. Determina quais serão os eixos pricipal e transversal do container.</p>
 
-    <p class="descricao-propriedade">Abaixo temos um exemplo utilizando as propriedades row e nowrap:</p>
+    <p class="descricao-propriedade">Abaixo temos um exemplo utilizando o valor padrão row nowrap:</p>
 
-    <h3 id="flex-flow">flex-flow: row nowrap</h3>
+    <h3 id="flex-flow-row-nowrap">row nowrap</h3>
 
     <h5>Exemplo:</h5>
     <div class="container display-flex flex-flow">
@@ -385,7 +416,7 @@
     <p class="descricao-propriedade">Abaixo estão seus possíveis valores:</p>
     
     <h3 id="align-content-stretch">stretch</h3>
-    <p class="descricao-propriedade"> Ítens em cada linha esticam para ocupar o espaço remanescente entre elas.</p>
+    <p class="descricao-propriedade">É o valor padrão, os ítens em cada linha esticam para ocupar o espaço remanescente entre elas.</p>
 
     <h5>Exemplo:</h5>
     <div class="container display-flex flex-wrap-wrap align-content-stretch">
@@ -418,7 +449,7 @@
 
 
     <h3 id="align-content-flex-start">flex-start</h3>
-    <p class="descricao-propriedade">ítens alinhados com o início do container. O valor (com maior suporte dos navegadores) flex-start se guia pela flex-direction, enquanto start se guia pela direção do writing-mode.</p>
+    <p class="descricao-propriedade">ítens alinhados com o início do container, o valor flex-start se guia pela flex-direction, enquanto start se guia pela direção do writing-mode.</p>
     
 
     <h5>Exemplo:</h5>
@@ -451,7 +482,7 @@
     </div>
 
     <h3 id="align-content-flex-end">flex-end</h3>    
-    <p class="descricao-propriedade">Ítens alinhados com o final do container. O valor (com maior suporte dos navegadores) flex-end se guia pela flex-direction, enquanto end se guia pela direção do writing-mode.</p>
+    <p class="descricao-propriedade">Ítens alinhados com o final do container, o valor flex-end se guia pela flex-direction, enquanto end se guia pela direção do writing-mode.</p>
 
     <h5>Exemplo:</h5>
     <div class="container display-flex flex-wrap-wrap align-content-flex-end">
@@ -614,17 +645,15 @@
     <div class="contido"></div>
     <div class="contido"></div>
     </div>
-    <!-- FAZER OUTRAS 2 PROPRIEDADES / FINALIZAR MENU DE NAVEGAÇÃO / COLOCAR BOTÃO DE TOPO FICO COM ROLAGEM SUAVE / COLOCAR O 'EXEMPLO:' ALINHADO AO CONTÊINER. -->
-    <!-- LINKS ÚTEIS -->
 
-    <!-- https://www.devmedia.com.br/menu-em-css-menu-dropdown-horizontal-com-html5-e-css3/37205 -->
+    <section>
+    <button><a href="#topo" class="btn"></a></button>
+   </section>
 
-    <!-- https://www.alura.com.br/apostila-html-css-javascript/19CA-novos-layouts-com-flexbox#:~:text=O%20display%3A%20flex%20funciona%20de,flex%20container%20com%20propriedades%20novas. -->
-
-    <!-- https://site.alura.com.br/artigos/css-guia-do-flexbox?utm_term=&utm_campaign=%5BSearch%5D+%5BPerformance%5D+-+Dynamic+Search+Ads+-+Artigos+e+Conte%C3%BAdos&utm_source=adwords&utm_medium=ppc&hsa_acc=7964138385&hsa_cam=11384329873&hsa_grp=111087461203&hsa_ad=662261334153&hsa_src=g&hsa_tgt=aud-539280195044:dsa-843358956400&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gclid=EAIaIQobChMI8d3T-ffIgQMVleBcCh10FQPvEAAYASAAEgIeufD_BwE -->
-
-    <!-- https://pt.linkedin.com/pulse/como-criar-um-bot%C3%A3o-para-voltar-ao-topo-em-uma-p%C3%A1gina-calixto-mocci#:~:text=No%20html%20%C3%A9%20simples%2C%20insira,via%20CSS%20e%20estiliz%C3%A1%2Dlo. -->
-
-    <!-- https://pt.stackoverflow.com/questions/339628/bot%C3%A3o-de-voltar-ao-topo-apenas-com-css-scroll-suave-apenas-com-css-%C3%A9-poss%C3%ADvel -->
+    <footer>
+    <section>
+        <sub><h4>Desenvolvido por: vineefreitas</h4></sub>
+    </section>
+    </footer>
 </body>
 </html>
